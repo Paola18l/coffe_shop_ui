@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import "package:google_fonts/google_fonts.dart";
+//import "package:google_fonts/google_fonts.dart";  checar
 
 class welcomeScreen extends StatelessWidget {
   @override
@@ -30,6 +30,38 @@ class welcomeScreen extends StatelessWidget {
                 fontSize: 50,
                 Colors.white,
               ),
+            ),
+            Column(
+              children: [
+                Text(
+                  "Feeling Low? Take a Sip of Coffee", //ve en la parte de abajo de la página principal
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(
+                        0.8), //está creando un color semi-transparente
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    letterSpacing:
+                        1, //controla el espacio entre las letras de un texto.
+                  ),
+                ),
+                SizedBox(
+                    height:
+                        80), //es un contenedor que se utiliza para agregar espacio vacío o dimensiones fijas
+                InkWell(
+                  //se utiliza para crear un área rectangular que responde a las interacciones del usuario, como toques y pulsaciones
+                  onTap:
+                      () {}, // es un callback que se ejecuta cuando el usuario toca el área
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal:
+                            30), //estás definiendo un relleno simétrico en todas las direcciones (arriba, abajo, izquierda y derecha) alrededor del widget al que se aplica.
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE57734),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
