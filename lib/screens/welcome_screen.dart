@@ -48,16 +48,31 @@ class welcomeScreen extends StatelessWidget {
                     height:
                         80), //es un contenedor que se utiliza para agregar espacio vacío o dimensiones fijas
                 InkWell(
-                  //se utiliza para crear un área rectangular que responde a las interacciones del usuario, como toques y pulsaciones
+                  splashColor: Colors
+                      .black, //se utiliza para crear un área rectangular que responde a las interacciones del usuario, como toques y pulsaciones
                   onTap:
                       () {}, // es un callback que se ejecuta cuando el usuario toca el área
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                        vertical: 15,
-                        horizontal:
-                            30), //estás definiendo un relleno simétrico en todas las direcciones (arriba, abajo, izquierda y derecha) alrededor del widget al que se aplica.
-                    decoration: BoxDecoration(
-                      color: Color(0xFFE57734),
+                  child: Ink(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: 15,
+                          horizontal:
+                              50), //estás definiendo un relleno simétrico en todas las direcciones (arriba, abajo, izquierda y derecha) alrededor del widget al que se aplica.
+                      decoration: BoxDecoration(
+                        color: Color(
+                            0xFFE57734), //se pone de color indicado la barra del centro
+                        borderRadius: BorderRadius.circular(
+                            10), //todas las esquinas del widget tendrán el mismo radio circular
+                      ),
+                      child: Text(
+                        "Get Start",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1,
+                        ),
+                      ),
                     ),
                   ),
                 ),
