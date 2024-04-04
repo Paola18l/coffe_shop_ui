@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:coffe_shop_ui/widgets/items_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -99,29 +100,36 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
               ),
-              TabBar(tabs: [
-                Tab(text: "Hot Coffee"),
-                Tab(text: "Hot Coffee"),
-                Tab(text: "Hot Coffee"),
-                Tab(text: "Hot Coffee"),
-              ]),
+              TabBar(
+                  controller: _tabController,
+                  labelColor: Color(0xFFE57734),
+                  unselectedLabelColor: Colors.white.withOpacity(0.5),
+                  isScrollable: true,
+                  indicator: UnderlineTabIndicator(
+                    borderSide: BorderSide(
+                      width: 3,
+                      color: Color(0xFFE57734),
+                    ),
+                    insets: EdgeInsets.symmetric(horizontal: 16),
+                  ),
+                  labelStyle:
+                      TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  labelPadding: EdgeInsets.symmetric(horizontal: 20),
+                  tabs: [
+                    Tab(text: "Hot Coffee"),
+                    Tab(text: "Cold Coffee"),
+                    Tab(text: "Cappuccino"),
+                    Tab(text: "Americano"),
+                  ]),
               SizedBox(
                 height: 10,
               ),
               Center(
                 child: [
-                  Container(
-                    color: Colors.red,
-                  ),
-                  Container(
-                    color: Colors.red,
-                  ),
-                  Container(
-                    color: Colors.red,
-                  ),
-                  Container(
-                    color: Colors.red,
-                  ),
+                  ItemsWidget(),
+                  ItemsWidget(),
+                  ItemsWidget(),
+                  ItemsWidget(),
                 ][_tabController.index],
               ),
             ],
