@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:coffee_shop_ui/screens/home_screen.dart';
 
-
+//esta parte del codigo nos permite tener la pagina principal de nuestra app donde le agregamos una imagen de fondo
+//un titulo grande centrado ,en la parte de abajo le escibimos un texto ,ademas un boton de acceso 
 class welcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,8 @@ class welcomeScreen extends StatelessWidget {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+//para controlar la distribución de los elementos a lo largo del eje principal de un widget que organiza a sus hijos de manera lineal, como Row y Column
           children: [
             Text(
               //vamos al google fonts y copiamos y lo colocamos debajo de cupertino
@@ -59,7 +62,7 @@ class welcomeScreen extends StatelessWidget {
                   },
                   child: Ink(
                     child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 15 horizontal: 50), 
+                      padding: EdgeInsets.symmetric(vertical: 15 horizontal: 50,)), 
     //estás definiendo un relleno simétrico en todas las direcciones (arriba, abajo, izquierda y derecha) alrededor del widget al que se aplica.
                       decoration: BoxDecoration(
   //se pone de color indicado la barra del centro
@@ -67,7 +70,7 @@ class welcomeScreen extends StatelessWidget {
   //todas las esquinas del widget tendrán el mismo radio circular
                       ),
                       child: Text(
-                        "Get Start",
+                        "Get Start", //es el boton de la parte de abajo para ingresar 
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,

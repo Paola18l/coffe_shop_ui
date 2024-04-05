@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Este nos permitio agregar los iconos de notificacion y de igual forma el de agregar mas
 class HomeBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
